@@ -1,40 +1,36 @@
 
 # Oracle Graph 
 
-## Lab1
-
-<br>
-
 **Scenario**
 
-<br>
-<br>
+1.  Which products did **customer 40202** buy from which store(s)?
 
- **Which products did customer 40202 buy from which store(s)?**
-</br>
-</br>
- 
-
-
- 
-   SQL> select * from graph match (c:Customers)-[co]->(o:Orders)-[os]->(s:Stores), (o:Orders)-[e:Order_Has_Product]->(p:Products) where id(c)=40202
+ ````
+ <copy>
+ select * from graph match (c:Customers)-[co]->(o:Orders)-[os]->(s:Stores), (o:Orders)-[e:Order_Has_Product]->(p:Products) where id(c)=40202
+ </copy>
+ ````
   
- 
-    
-    
-![](./images/IMG1.PNG)
+
+![](./images/IMG1.PNG " ") 
 
 **SQL Query**
-   
-    SQL>select count(distinct vid) from graphvt$ ;
-    
+
+````
+<copy>   
+select count(distinct vid) from graphvt$ ;
+</copy>
+````    
     COUNT(DISTINCTVID)
     -------------------
        2410
  
 
-
-    SQL> select count(distinct eid) from graphge$;
+````
+<copy>
+select count(distinct eid) from graphge$;
+</copy>
+````
 
     COUNT(DISTINCTVID)
     -------------------
@@ -46,26 +42,36 @@
  **PGQL  query:**
  
  
-    
-    opg-jshell-rdbms> query.accept(“select count(v) from graph match(v)“);
-    
+````
+<copy>    
+opg-jshell-rdbms> query.accept(“select count(v) from graph match(v)“);
+    </copy>
+````
+
     count(v) 
     --------
     2410
   
  
-   ````
-   opg-jshell-rdbms> query.accept(“select count(e) from graph match ()-[e]->()“);
- count(e) 
- --------
- 11632
-    ````
+````
+<copy>
+opg-jshell-rdbms> query.accept(“select count(e) from graph match ()-[e]->()“);
+</copy>
+````
+
+    count(e) 
+    --------
+    11632
+   
    
 **Check connection between every nodes like (Customers, Products, Orders):**
 
-  
-    opg-jshell-rdbms> query.accept(“select distinct label(e) from graph match ()-[e]->(m)“) ;
-    
+````
+<copy>  
+opg-jshell-rdbms> query.accept(“select distinct label(e) from graph match ()-[e]->(m)“) ;
+</copy>
+````
+
     +--------------------+
     | label(e)      |
     +--------------------+
@@ -79,9 +85,13 @@
 
 **What are the nodes here ?**
 
-   
-    opg-jshell-rdbms> query.accept(“select distinct label(v) from graph match (v)“) ; 
-    
+````
+
+   <copy>
+opg-jshell-rdbms> query.accept(“select distinct label(v) from graph match (v)“) ; 
+    </copy>
+````
+
     +-----------+
     | label(v) |
     +-----------+

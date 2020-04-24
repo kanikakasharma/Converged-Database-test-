@@ -1,40 +1,48 @@
 
 # Oracle Graph 
 
-## Lab2
-
-<br>
-
 **Scenario**
 
-<br>
-<br>
+2. First **100 results** of customers and orders from store **30001?**
 
- **First 100 results of customers and orders from store 30001?**
-</br>
-</br>
  
 ![](./images/IMG2.PNG)
 
  
  **Steps to install Oracle Graph  Server:**
- 
- 
+
+    ````
+    <copy> 
     cd /home/opc
     chown -R root:root oracle-graph-20.1.0.x86_64.rpm
     chmod 777 oracle-graph-20.1.0.x86_64.rpm
+    </copy>
+    ````
     
+    
+
+    
+    <copy>
     rpm -i oracle-graph-20.1.0.x86_64.rpm
+    </copy>
     
+    <copy>
     usermod -a -G oraclegraph oracle
     useradd graphuser
     groupadd oraclegraph
     usermod -a -G oraclegraph oracle
+    </copy>
     
+    <copy>
     ls -ld /etc/oracle/graph/
     cd /etc/oracle
+    </copy>
     
+     ````
+    <copy>
     chown -R oracle:oinstall graph/
+    </copy>
+     ````
 
     locate server.conf
     cd /etc/oracle/graph/
@@ -199,7 +207,9 @@
     +---------------------------+
     
     
+  
     opg-jshell-rdbms> query.accept("select s.store_name, o.order_id, p.product_name from graph match (c:Customers)->(o:Orders)->(s:Stores), (o:Orders)-[e:Order_Has_Product]->(p:Products) where id(c)=40202");
+   
     
     +-----------------------------------------------------+
     | s.store_name | o.order_id | p.product_name          |
