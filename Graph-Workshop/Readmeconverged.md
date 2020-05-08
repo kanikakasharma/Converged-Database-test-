@@ -7,7 +7,7 @@ Oracle Spatial and Graph is included at no extra cost with all Oracle Database c
 
 ## Workshops
 
-- [BigData](https://kanika.sharma.github.io/Converged-Database/Graph-Workshop/workshops/Bigdata-freetier/)
+- [Graph](https://kanika.sharma.github.io/Converged-Database/Graph-Workshop/workshops/Graph-freetier/)
 
 Click on one of our workshops below to access the content.
 
