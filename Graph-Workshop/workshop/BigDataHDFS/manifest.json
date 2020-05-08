@@ -1,0 +1,30 @@
+{
+    "tutorials": [
+        {         
+            "title": "Overview of Oracle BigData SQL",
+            "description": "Introduction to Oracle BigData",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "./../intro/intro.md"
+        },
+        {         
+            "title": "Env Setup",
+            "description": "",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Oracle-BigData-Setup.md"
+        },
+        {         
+            "title": "Lab1: Using Oracle Big Data SQL for Data Access in HDFS",
+            "description": "",
+            "partnumber": "Ennnnn_01",
+            "publisheddate": "03/10/2020",
+            "contentid": "12nnnn",
+            "filename": "../Labs/Oracle-BigData-Lab1.md"
+        }
+        
+        
+    ]
+}
