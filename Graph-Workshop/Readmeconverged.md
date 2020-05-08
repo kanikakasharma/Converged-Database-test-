@@ -6,7 +6,11 @@ The spatial features of Spatial and Graph include both basic spatial data manage
 Oracle Spatial and Graph is included at no extra cost with all Oracle Database cloud services and on-prem editions.
 
 ## Workshops
+
+- [BigData](https://kanika.sharma.github.io/Converged-Database/Graph-Workshop/workshops/Bigdata-freetier/)
+
 Click on one of our workshops below to access the content.
+
 
 [![](./images/multitenant-screenshot-freetier.png)](https://oracle.github.io/learning-library/data-management-library/database/multitenant/freetier/index.html)  ![](./images/transparent.png " ")  [![](./images/multitenant-screenshot-ssworkshop.png)](https://oracle.github.io/learning-library/data-management-library/database/multitenant/ssworkshop/index.html)
 
